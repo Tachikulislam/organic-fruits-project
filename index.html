@@ -16,13 +16,15 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    
+
     <!-- Tailwind CSS Configuration -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                primary: 'rgb(248, 246, 243)',
+                primary: 'rgb(248, 246, 243)', // This should match your config.
                 secondary: 'rgb(17, 17, 17)',
                 accent: 'rgb(106, 151, 57)',
                 body_neutral: 'rgb(51, 51, 51)',
@@ -31,21 +33,23 @@
                 Poppins: 'Poppins',
               },
               backgroundImage: { 
-                leaf1: "url('./images/leaf01.png')",
+                bannerBg: "url('./images/leaf01.png')",
                 call_to_action: "url('./images/call.jpg')",
+                
+                
               },
             },
           },
         }
-      </script>
+    </script>
 </head>
 <body class="font-Poppins">
     <!-- header section start -->
      <header>
         <nav class="w-11/12 mx-auto">
-            <div class="navbar">
+            <div class="navbar p-0 py-2">
                 <div class="navbar-start">
-                  <div class="dropdown">
+                  <!-- <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -59,33 +63,99 @@
                           stroke-width="2"
                           d="M4 6h16M4 12h8m-8 6h16" />
                       </svg>
+
+                      <i class="fa-solid fa-bars"></i>
                     </div>
                     <ul
                       tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Item 1</a></li>
-                      
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg font-medium">
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Home</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Everything</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Groceries</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>About</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Contact</a></li>
                     </ul>
-                  </div>
-                  <a class="btn btn-ghost text-xl">
-                    <img src="images/logo.svg" alt="">
+                  </div> -->
+                  <a href="#" class="">
+                    <img class="w-36" src="images/logo.svg" alt="">
                   </a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li class="hover:text-primary"><a>Home</a></li>
-                    <li class="hover:text-primary"><a>Everything</a></li>
-                    <li class="hover:text-primary"><a>Groceries</a></li>
-                    <li class="hover:text-primary"><a>About</a></li>
-                    <li class="hover:text-primary"><a>Contact</a></li>
+                  <ul class="menu menu-horizontal px-1 text-lg font-medium">
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Home</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Everything</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Groceries</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>About</a></li>
+                    <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Contact</a></li>
                     
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn">Button</a>
+                  <div class="flex items-center gap-5 text-lg">
+                    <button class="flex items-center gap-2 font-semibold text-accent">
+                      <span>$20.00</span>
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <button>
+                      <i class="fa-solid fa-user"></i>
+                    </button>
+                  </div>
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <!-- <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg> -->
+
+                      <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg font-medium right-0 gap-5">
+                      <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Home</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Everything</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Groceries</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>About</a></li>
+                     <li class="hover:text-primary transition-colors duration-300 ease-in-out"><a>Contact</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
         </nav>
+
+    <!-- banner section start -->
+     <section class=" bg-bannerBg bg-no-repeat bg-right-bottom">
+      <div class="w-full h-full bg-primary bg-opacity-90">
+
+        <div class="w-9/12 mx-auto py-28 flex sm:flex-row flex-col items-center">
+          <div class="flex-1">
+            <img src="images/bannerbg.png" alt="">
+          </div>
+          <div class="flex-1 sm:text-left text-center">
+            <h4 class="text-xl font-semibold my-5">Best Quality Product</h4>
+            <h1 class="lg:text-6xl text-4xl font-semibold leading-tight">Join The Organic Movement!</h1>
+            <p class="my-5 text-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, aperiam officiis, ducimus provident unde voluptates sequi iusto alias corporis voluptatem cupiditate quam nulla repellat fugiat praesentium. Dolorum totam quis nostrum.</p>
+            <div class="flex sm:justify-start justify-center">
+              <button class="flex items-center gap-2 rounded-md bg-accent hovwe:bg-primary text-white px-10 py-5">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Shope Now</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+     </section>
      </header>
     
 </body>
